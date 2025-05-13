@@ -1,0 +1,52 @@
+body {
+  font-family: var(--ui-font-family);
+  font-weight: 400;
+  font-size: var(--ui-font-size-base);
+  color: var(--ui-text-color-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: var(--ui-color-primary);
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: var(--ui-color-primary-light-3);
+  }
+  &:active {
+    color: var(--ui-color-primary-dark-2);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--ui-text-color-regular);
+  margin: 0;
+}
+h1 {
+  font-size: 2.2rem; /* 或者用 calc(var(--el-font-size-base) + 6px) */
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;                   /* 统一所有标题行高 */
+}
+h1:first-child, h2:first-child, 
+h3:first-child, h4:first-child, 
+h5:first-child, h6:first-child {
+  margin-top: 0;                         /* 如果是第一个标题，去掉顶部外边距 */
+}
+
+
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}

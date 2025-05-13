@@ -1,0 +1,129 @@
+// 基础变量（定义默认颜色）
+// 基础结构样式
+// hover、focus、active 状态
+// .is-round、.is-circle、.is-disabled 这些统一处理
+.ui-button{
+  --ui-button-font-weight: var(--ui-font-weight-primary); 
+  --ui-button-border-color: var(--ui-border-color); 
+  --ui-button-bg-color: var(--ui-fill-color-blank);
+  --ui-button-text-color: var(--ui-text-color-regular);
+  --ui-button-disabled-text-color: var(--ui-disabled-text-color); 
+  --ui-button-disabled-bg-color: var(--ui-fill-color-blank);
+  --ui-button-disabled-border-color: var(--ui-border-color-light); 
+  --ui-button-hover-text-color: var(--ui-color-primary);
+  --ui-button-hover-bg-color: var(--ui-color-primary-light-9);
+  --ui-button-hover-border-color: var(--ui-color-primary-light-7); 
+  --ui-button-active-text-color: var(--ui-button-hover-text-color);
+  --ui-button-active-border-color: var(--ui-color-primary);
+  --ui-button-active-bg-color: var(--ui-button-hover-bg-color); 
+  --ui-button-outline-color: var(--ui-color-primary-light-5); 
+  --ui-button-active-color: var(--ui-text-color-primary);
+}
+.ui-button{
+  display: inline-flex;
+  justify-content: center; 
+  align-items: center; 
+  line-height: 1; 
+  height: 32px;
+  white-space: nowrap; 
+  cursor: pointer;
+  color:var(--ui-button-text-color,#606266); 
+  text-align: center;
+  box-sizing: border-box; 
+  outline: none; 
+  transition: 0.1s;
+  font-weight: var(--ui-button-font-weight,500); 
+  user-select: none;
+  vertical-align: middle; 
+  -webkit-appearance:none;
+  background-color: var(--ui-button-bg-color,#ffffff); 
+  border: var(--ui-border);
+  border-color: var(--ui-button-border-color,#dcdfe6);
+  padding:8px 15px;
+  font-size: var(--ui-font-size-base);
+  border-radius:var(--ui-border-radius-base);
+  &+&{
+    margin-left:12px;
+  }
+  &:hover,
+  &:focus{
+    color: var(--ui-button-hover-text-color,#409eff);
+    border-color: var(--ui-button-hover-border-color,rgb(197.7, 225.9, 255)); 
+    background-color: var(--ui-button-hover-bg-color,rgb(235.9, 245.3, 255)); 
+    outline: none;
+  }
+  &:active{
+    color: var(--ui-button-active-text-color,#409eff);
+    border-color: var(--ui-button-active-border-color,#409eff); 
+    background-color: var(--ui-button-active-bg-color,rgb(235.9, 245.3, 255)); 
+    outline: none;
+  }
+
+  &.is-plain {
+    --ui-button-hover-text-color: var(--ui-color-primary); 
+    --ui-button-hover-bg-color: var(--ui-fill-color-blank); 
+    --ui-button-hover-border-color: var(--ui-color-primary);
+  }
+  &.is-round {
+    border-radius:var(--ui-border-radius-round);
+  }
+  &.is-circle {
+    border-radius:50%; 
+    padding: 8px;
+  }
+  &.is-disabled,&.is-disabled:hover,&.is-disabled:focus, 
+  &[disabled],&[disabled]:hover,&[disabled]:focus{
+    color: var(--ui-button-disabled-text-color,#a8abb2); 
+    cursor: not-allowed;
+    background-image:none;
+    background-color: var(--ui-button-disabled-bg-color,#f5f7fa); 
+    border-color: var(--ui-button-disabled-border-color,#e4e7ed);
+  }
+  & .ui-icon{
+    padding: 5px;
+  }
+}
+@each $val in (primary,success,warning,danger,info){
+  .ui-button--$(val){
+    --ui-button-text-color: var(--ui-color-white); 
+    --ui-button-bg-color:var(--ui-color-$(val));
+    --ui-button-border-color: var(--ui-color-$(val));
+    --ui-button-outline-color:var(--ui-color-$(val)-light-5); 
+    --ui-button-active-color: var(--ui-color-$(val)-dark-2); 
+    --ui-button-hover-text-color: var(--ui-color-white);
+    --ui-button-hover-bg-color: var(--ui-color-$(val)-light-3);
+    --ui-button-hover-border-color: var(--ui-color-$(val)-light-3);
+    --ui-button-active-text-color: var(--ui-color-$(val));
+    --ui-button-active-bg-color: var(--ui-color-$(val)-dark-2);
+    --ui-button-active-border-color: var(--ui-color-$(val)-dark-2);
+    --ui-button-disabled-text-color: var(--ui-color-white);
+    --ui-button-disabled-bg-color:var(--ui-color-$(val)-light-5); 
+    --ui-button-disabled-border-color: var(--ui-color-$(val)-light-5);
+  }
+  .ui-button--$(val).is-plain {
+    --ui-button-text-color: var(--ui-color-$(val));
+    --ui-button-bg-color: var(--ui-color-$(val)-light-9);
+    --ui-button-border-color: var(--ui-color-$(val)-light-5); 
+    --ui-button-hover-text-color: var(--ui-color-white); 
+    --ui-button-hover-bg-color: var(--ui-color-$(val));
+    --ui-button-hover-border-color: var(--ui-color-$(val)); 
+    --ui-button-active-text-color: var(--ui-color-white);
+  }
+
+}
+
+//不同尺寸
+.ui-button--large {
+  --ui-button-size: 40px;
+  height: var(--ui-button-size); 
+  padding:12px 19px;
+  font-size: var(--ui-font-size-base);
+  border-radius: var(--ui-border-radius-base);
+}
+.ui-button--small {
+  --ui-button-size: 24px;
+  height: var(--ui-button-size); 
+  padding: 5px 11px; 
+  font-size: 12px;
+  border-radius:calc(var(--ui-border-radius-base)-1px);
+}

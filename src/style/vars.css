@@ -1,0 +1,90 @@
+:root {
+  --ui-color-white: #ffffff;
+  --ui-color-black: #000000;
+  --ui-color-primary: #409eff;
+  --ui-color-primary-light-3: rgb(121.3, 187.1, 255);
+  --ui-color-primary-light-5: rgb(159.5, 206.5, 255);
+  --ui-color-primary-light-7: rgb(197.7, 225.9, 255);
+  --ui-color-primary-light-8: rgb(216.8, 235.6, 255);
+  --ui-color-primary-light-9: rgb(235.9, 245.3, 255);
+  --ui-color-primary-dark-2: rgb(51.2, 126.4, 204);
+  --ui-color-success: #67c23a;
+  --ui-color-success-light-3: rgb(148.6, 212.3, 117.1);
+  --ui-color-success-light-5: rgb(179, 224.5, 156.5);
+  --ui-color-success-light-7: rgb(209.4, 236.7, 195.9);
+  --ui-color-success-light-8: rgb(224.6, 242.8, 215.6);
+  --ui-color-success-light-9: rgb(239.8, 248.9, 235.3);
+  --ui-color-success-dark-2: rgb(82.4, 155.2, 46.4);
+  --ui-color-warning: #e6a23c;
+  --ui-color-warning-light-3: rgb(237.5, 189.9, 118.5);
+  --ui-color-warning-light-5: rgb(242.5, 208.5, 157.5);
+  --ui-color-warning-light-7: rgb(247.5, 227.1, 196.5);
+  --ui-color-warning-light-8: rgb(250, 236.4, 216);
+  --ui-color-warning-light-9: rgb(252.5, 245.7, 235.5);
+  --ui-color-warning-dark-2: rgb(184, 129.6, 48);
+  --ui-color-danger: #f56c6c;
+  --ui-color-danger-light-3: rgb(248, 152.1, 152.1);
+  --ui-color-danger-light-5: rgb(250, 181.5, 181.5);
+  --ui-color-danger-light-7: rgb(252, 210.9, 210.9);
+  --ui-color-danger-light-8: rgb(253, 225.6, 225.6);
+  --ui-color-danger-light-9: rgb(254, 240.3, 240.3);
+  --ui-color-danger-dark-2: rgb(196, 86.4, 86.4);
+  --ui-color-info: #909399;
+  --ui-color-info-light-3: rgb(177.3, 179.4, 183.6);
+  --ui-color-info-light-5: rgb(199.5, 201, 204);
+  --ui-color-info-light-7: rgb(221.7, 222.6, 224.4);
+  --ui-color-info-light-8: rgb(232.8, 233.4, 234.6);
+  --ui-color-info-light-9: rgb(243.9, 244.2, 244.8);
+  --ui-color-info-dark-2: rgb(115.2, 117.6, 122.4);
+
+  --ui-bg-color: #ffffff;
+  --ui-bg-color-page: #f2f3f5;
+  --ui-bg-color-overlay: #ffffff;
+  --ui-text-color-primary: #303133;
+  --ui-text-color-regular: #606266;
+  --ui-text-color-secondary: #909399;
+  --ui-text-color-placeholder: #a8abb2;
+  --ui-text-color-disabled: #c0c4cc;
+  --ui-border-color: #dcdfe6;
+  --ui-border-color-light: #e4e7ed;
+  --ui-border-color-lighter: #ebeef5;
+  --ui-border-color-extra-light: #f2f6fc;
+  --ui-border-color-dark: #d4d7de;
+  --ui-border-color-darker: #cdd0d6;
+  --ui-fill-color: #f0f2f5;
+  --ui-fill-color-light: #f5f7fa;
+  --ui-fill-color-lighter: #fafafa;
+  --ui-fill-color-extra-light: #fafcff;
+  --ui-fill-color-dark: #ebedf0;
+  --ui-fill-color-darker: #e6e8eb;
+  --ui-fill-color-blank: #ffffff;
+
+  /* border */
+  --ui-border-width: 1px;
+  --ui-border-style: solid;
+  --ui-border-color-hover: var(--ui-text-color-disabled);
+  --ui-border: var(--ui-border-width) var(--ui-border-style) var(--ui-border-color);
+  --ui-border-radius-base: 4px;
+  --ui-border-radius-small: 2px;
+  --ui-border-radius-round: 20px;
+  --ui-border-radius-circle: 100%;
+
+  /* font */
+  --ui-font-size-extra-large: 20px;
+  --ui-font-size-large: 18px;
+  --ui-font-size-medium: 16px;
+  --ui-font-size-base: 14px;
+  --ui-font-size-small: 13px;
+  --ui-font-size-extra-small: 12px;
+  --ui-font-family: "uivetica Neue", uivetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  --ui-font-weight-primary: 500;
+
+  /* disabled */
+  --ui-disabled-bg-color: var(--ui-fill-color-light);
+  --ui-disabled-text-color: var(--ui-text-color-placeholder);
+  --ui-disabled-border-color: var(--ui-border-color-light);
+
+  /* animition */
+  --ui-transition-duration:0.3s;
+  --ui-transition-duration-fast:0.2s;
+}
