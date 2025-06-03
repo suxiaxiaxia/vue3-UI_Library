@@ -59,18 +59,23 @@
     <br><br>
 
     <!-- v-model双向同步activeNames -->
-    <Collapse v-model="openedValue">
-      <CollapseItem name="a" title="baaaaa">
+    <Collapse v-model="openedValue" accordion>
+      <CollapseItem name="a" title="标题一">
         <div>content a</div>
       </CollapseItem>
-      <CollapseItem name="b" title="bbbbbb">
+      <CollapseItem name="b" title="标题二">
         <div>content b</div>
       </CollapseItem>
-      <CollapseItem name="c" title="ccccc" disabled></CollapseItem>
-
+      <CollapseItem name="c" title="标题三" disabled></CollapseItem>
     </Collapse>
 
-    <Icon icon="fa-solid fa-user-secret" :size="size" bounce type="danger" color="#fff222"></Icon>
+    <br><br>
+    <Icon 
+    icon="fa-solid fa-user-secret" 
+    :size="size" 
+    bounce 
+    type="danger" 
+    ></Icon>
 </template>
 
 

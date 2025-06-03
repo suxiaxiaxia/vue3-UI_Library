@@ -1,3 +1,5 @@
+import { containerPreview, componentPreview } from '@vitepress-demo-preview/plugin'
+
 export default {
   // app level config options
   //lang: 'ch-ZN',
@@ -18,6 +20,12 @@ export default {
           ]
         }
       ]
+    }
+  },
+  markdown: {
+    config(md) {
+      md.use(containerPreview)
+      md.use(componentPreview)
     }
   }
 }
